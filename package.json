@@ -1,0 +1,38 @@
+{
+  "name": "nextra-templates",
+  "private": true,
+  "version": "0.0.1",
+  "packageManager": "pnpm@10.13.1",
+  "workspaces": [
+    "templates/*"
+  ],
+  "dependencies": {
+    "fs-extra": "^11.3.2",
+    "next": "15.5.4",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.36.0",
+    "eslint-config-next": "15.5.4",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
+    "tailwindcss": "^4.1.14",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "install-all": "pnpm install",
+    "dev": "pnpm -r --filter base dev",
+    "dev:blog": "pnpm -r --filter base-with-blog dev",
+    "dev:theme": "pnpm -r --filter base-with-theme dev",
+    "dev:shadcn": "pnpm -r --filter base-with-shadcn dev",
+    "lint:app": "next lint -r "
+  }
+}

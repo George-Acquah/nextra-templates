@@ -1,0 +1,11 @@
+// .eslintrc.json
+{
+  "root": true,
+  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+  "plugins": [],
+  "rules": {
+    "no-console": "warn",
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "react/react-in-jsx-scope": "off"
+  }
+}

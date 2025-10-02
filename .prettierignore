@@ -1,0 +1,9 @@
+dist/
+
+
+pnpm-lock.yaml
+
+templates/next-env/**/*.d.ts
+
+# Symlink files
+readme.md

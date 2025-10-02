@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "extends": [".eslintrc.json"],
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+
+      "excludedFiles": ["templates/**/*", "**/*.d.ts"],
+      "parserOptions": {
+        "project": true
+      }
+    }
+  ]
+}
