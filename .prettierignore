@@ -2,8 +2,12 @@ dist/
 
 
 pnpm-lock.yaml
-
+pnpm-workspace.yaml
+node_modules/
+**/.next
+**.node_modules
 templates/next-env/**/*.d.ts
 
 # Symlink files
+docs/*.md
 readme.md
