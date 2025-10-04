@@ -41,8 +41,9 @@
   "scripts": {
     "install-all": "pnpm install",
     "dev": "pnpm -r --filter base dev",
-    "dev:blog": "pnpm -r --filter base-with-blog dev",
-    "dev:theme": "pnpm -r --filter base-with-theme dev",
+    "dev:blog": "pnpm -r --filter template-blog dev",
+    "dev:theme": "pnpm -r --filter template-theme dev",
+    "dev:f:blog": "pnpm -r --filter feature-blog dev",
     "prepare": "pnpm husky",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
