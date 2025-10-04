@@ -35,14 +35,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # 4. Run ESLint Check (The 'lint' script must exist in package.json)
+      # 4. Fix all eslint fixable lint errors
+      - name: Fix Linting Issues
+        run: pnpm run lint:fix
+
+      # 5. Run ESLint Check (The 'lint' script must exist in package.json)
       - name: Run Linting Checks
         run: pnpm run lint
 
-      # 5. Run Build Check (Ensure the TypeScript/JS compiles successfully)
+      # 6. Run Build Check (Ensure the TypeScript/JS compiles successfully)
       - name: Run Build
         run: pnpm run build
-
-      # 6. Run Tests (Uncomment and configure if you add a 'test' script later)
-      # - name: Run Tests
-      #   run: pnpm test
