@@ -13,9 +13,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
-    "paths": {
-      "root-styles/*": ["./styles/*"]
-    }
+    "incremental": true
+    // "baseUrl": ".",
+    // "paths": {
+    //   "@nextra-templates/utils": ["packages/utils/src/index.ts"],
+    //   "@nextra-templates/ui": ["packages/ui/src/index.ts"]
+    // }
   }
 }
