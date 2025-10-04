@@ -1,16 +1,16 @@
-import { FlatCompat } from '@eslint/eslintrc'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { FlatCompat } from '@eslint/eslintrc';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: {
     extends: ['eslint:recommended'],
   },
-})
+});
 
 const config = [
   {
@@ -55,6 +55,9 @@ const config = [
       // code Quality Enforcement
       'no-unused-vars': ['error', { argsIgnorePattern: '^_' }], // Make unused vars an error
 
+      semi: ['error', 'always'], // Enforce semicolons
+      quotes: ['error', 'single'], // Enforce single quotes
+      'comma-dangle': ['error', 'always-multiline'], // Enforce trailing commas where valid in ES5 (objects, arrays, etc.)
       // Next.js App Router Fix: Disable the Pages Router link check
       // This is the fix for the warning about missing 'pages' directory
       '@next/next/no-html-link-for-pages': 'off',
@@ -63,6 +66,6 @@ const config = [
       'react/react-in-jsx-scope': 'off',
     },
   },
-]
+];
 
-export default config
+export default config;
