@@ -10,7 +10,7 @@ export async function exportTemplate(templateName: string, targetDir: string) {
 
   // 1. Copy the base template
   await fs.copy(sourceDir, finalDir)
-  console.log(`📁 Copied ${templateName} to ${finalDir}`)
+  // console.log(`📁 Copied ${templateName} to ${finalDir}`)
 
   // 2. Add root shared files
   const sharedFiles = [
@@ -59,5 +59,5 @@ export async function exportTemplate(templateName: string, targetDir: string) {
   // 5. Clean up workspace fields if any
   delete finalPkg.workspaces
 
-  console.log('✅ Template exported successfully.')
+  // console.log('✅ Template exported successfully.')
 }

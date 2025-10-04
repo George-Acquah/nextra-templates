@@ -1,6 +1,6 @@
 import path from 'node:path'
 
-export default {
+const config = {
   plugins: {
     'postcss-import': {
       path: [
@@ -11,3 +11,5 @@ export default {
     '@tailwindcss/postcss': {},
   },
 }
+
+export default config

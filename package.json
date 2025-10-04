@@ -1,6 +1,7 @@
 {
   "name": "nextra-templates",
   "private": true,
+  "type": "module",
   "version": "0.0.1",
   "packageManager": "pnpm@10.13.1",
   "workspaces": [
@@ -15,15 +16,22 @@
     "tailwind-smart-merge": "^1.0.2"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.1.0",
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4.0.0",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.36.0",
     "eslint-config-next": "15.5.4",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.3",
     "postcss": "^8.5.6",
     "postcss-import": "^16.1.1",
     "prettier": "^3.6.2",
@@ -35,7 +43,20 @@
     "dev": "pnpm -r --filter base dev",
     "dev:blog": "pnpm -r --filter base-with-blog dev",
     "dev:theme": "pnpm -r --filter base-with-theme dev",
-    "dev:shadcn": "pnpm -r --filter base-with-shadcn dev",
-    "lint:app": "next lint -r "
+    "prepare": "pnpm husky",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown",
+    "**/*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
