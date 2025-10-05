@@ -1,0 +1,90 @@
+export const metadata = {
+  title: 'Test Blog',
+  description:
+    'This is a sample post used for testing the MDX and metadata setup in the monorepo.',
+  excerpt:
+    'Verifying MDX rendering, frontmatter extraction, and component loading in a complex development environment.',
+  date: '2025-03-17T12:00:00Z',
+  tags: ['Testing', 'MDX', 'Monorepo'],
+  ogImage: '/og-image-test-blog.webp', // Updated OG image path
+  featured: true,
+  faqs: [
+    {
+      question: 'What is the purpose of this post?',
+      answer:
+        'To ensure that the MDX file processing, metadata extraction (frontmatter), and custom component rendering are working correctly across the monorepo structure.',
+    },
+    {
+      question: 'Why did the component error occur previously?',
+      answer:
+        'The error was likely due to a misnamed MDX component file (`mdx-component.tsx` instead of `mdx-components.tsx`), which prevented the MDX runtime from establishing the required client boundary.',
+    },
+  ],
+  authorSlugs: ['author-slug'],
+}
+
+# Understanding the Test Blog
+
+_(This is an `h1` — the primary heading for validation)_
+
+Welcome to the **Test Blog**. This content exists purely to confirm that your entire data flow is functional: from reading the file content on the server, to extracting frontmatter, to finally rendering the MDX body on the client.
+
+---
+
+## Component Rendering Validation
+
+Search Engine Optimization (SEO) is important, but for this post, **validation** is key. We need to ensure all basic Markdown elements and any custom components are loading correctly using the new `mdx-components.tsx` setup.
+
+Without it:
+
+- Your metadata would not be extracted.
+- Custom components would throw errors.
+- The build process would fail.
+
+With it: ✅ Content is readable, ✅ metadata is accurate, ✅ system is stable.
+
+---
+
+## Test Metadata & Links
+
+This section checks that internal and external linking works:
+
+### Internal Links
+
+Check out the [home page](/) or jump directly to the [Code Examples](#code-examples).
+For an external reference, here’s a link to [Google](https://google.com).
+
+---
+
+## Lists for Verification
+
+Unordered lists for testing formatting:
+
+- File reading (`fs.readFileSync`) is successful.
+- Frontmatter parsing (`gray-matter` or Next.js internal) is successful.
+- Sorting by date is successful.
+
+Ordered lists for testing structure:
+
+1. Validate MDX parsing.
+2. Confirm Client Component boundaries.
+3. Deploy to production environment.
+
+---
+
+## Code Examples
+
+Inline code looks like this: `npm install --workspace=@my/package`.
+
+Block code confirms pre-formatted text rendering:
+
+```javascript
+// This block of code confirms syntax highlighting support
+function validateSystem(status) {
+  if (status === 'functional') {
+    return true
+  }
+  console.log('System validation failed.')
+  return false
+}
+```

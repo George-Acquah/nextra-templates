@@ -1,13 +1,10 @@
 {
-  "name": "@nextra-templates/utils",
+  "name": "@nextra-templates/constants",
   "private": true,
   "type": "module",
   "version": "0.0.1",
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc"
-  },
-  "dependencies": {
-    "@nextra-templates/constants": "workspace:*"
   }
 }

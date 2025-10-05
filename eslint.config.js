@@ -16,21 +16,23 @@ const config = [
   {
     ignores: [
       'node_modules/',
-      'templates/**/node_modules/',
-      'features/**/node_modules/',
-      'templates/**/.next/',
-      'features/**/.next/',
-      'templates/**/dis/',
-      'features/**/dist/',
+      '**/**/node_modules/',
+      '**/**/.next/',
+      '**lates/**/dist/',
       '.next/',
-      'out/',
-      'dist/',
-      'public/',
+      '**/**/public/',
+      '**/**/*.d.ts',
+      '**/**/mdx-components.tsx',
     ],
   },
 
   // Apply legacy configs (Next.js and core rules)
-  ...compat.extends('next', 'next/core-web-vitals', 'prettier'),
+  ...compat.extends(
+    'next',
+    'next/core-web-vitals',
+    'next/typescript',
+    'prettier',
+  ),
 
   // **1. Global/Source Code Rules (Stricter)**
   {
@@ -59,7 +61,6 @@ const config = [
       quotes: ['error', 'single'], // Enforce single quotes
       'comma-dangle': ['error', 'always-multiline'], // Enforce trailing commas where valid in ES5 (objects, arrays, etc.)
       // Next.js App Router Fix: Disable the Pages Router link check
-      // This is the fix for the warning about missing 'pages' directory
       '@next/next/no-html-link-for-pages': 'off',
 
       // Standard React/JSX Fixes

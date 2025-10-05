@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "author-slug",
+    "name": "Author Name",
+    "description": "Full-Stack | MERN | .NET",
+    "bio": "Full-stack developer — writing about React, Next.js and web performance.",
+    "avatar": "",
+    "social": {
+      "twitter": "https://twitter.com/your-handle",
+      "github": "https://github.com/your-github",
+      "linkedin": "you-can-remove-them-if-you-don't-want-to-display-your-socials"
+    }
+  }
+]
