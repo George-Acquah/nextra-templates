@@ -39,7 +39,7 @@ jobs:
       - name: Fix Linting Issues
         run: pnpm run lint:fix
 
-      # 5. Run ESLint Check (The 'lint' script must exist in package.json)
+      # 5. Run ESLint Check
       - name: Run Linting Checks
         run: pnpm run lint
 
