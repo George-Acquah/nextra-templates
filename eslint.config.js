@@ -61,7 +61,6 @@ const config = [
       quotes: ['error', 'single'], // Enforce single quotes
       'comma-dangle': ['error', 'always-multiline'], // Enforce trailing commas where valid in ES5 (objects, arrays, etc.)
       // Next.js App Router Fix: Disable the Pages Router link check
-      // This is the fix for the warning about missing 'pages' directory
       '@next/next/no-html-link-for-pages': 'off',
 
       // Standard React/JSX Fixes
