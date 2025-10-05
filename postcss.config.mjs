@@ -1,4 +1,4 @@
-import path from 'node:path'
+import path from 'node:path';
 
 const config = {
   plugins: {
@@ -10,6 +10,6 @@ const config = {
     },
     '@tailwindcss/postcss': {},
   },
-}
+};
 
-export default config
+export default config;
