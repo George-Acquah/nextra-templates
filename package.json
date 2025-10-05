@@ -10,6 +10,7 @@
     "packages/*"
   ],
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "clsx": "^2.1.1",
     "fs-extra": "^11.3.2",
     "next": "15.5.4",
@@ -49,7 +50,7 @@
     "dev:f:blog": "pnpm -r --filter feature-blog dev",
     "prepare": "pnpm husky",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint:fix": "eslint . --fix --no-warn-ignored",
     "format": "prettier --write ."
   },
   "lint-staged": {
