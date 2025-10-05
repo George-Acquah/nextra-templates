@@ -16,16 +16,13 @@ const config = [
   {
     ignores: [
       'node_modules/',
-      'templates/**/node_modules/',
-      'features/**/node_modules/',
-      'templates/**/.next/',
-      'features/**/.next/',
-      'templates/**/dis/',
-      'features/**/dist/',
+      '**/**/node_modules/',
+      '**/**/.next/',
+      '**lates/**/dist/',
       '.next/',
-      'out/',
-      'dist/',
-      'public/',
+      '**/**/public/',
+      '**/**/*.d.ts',
+      '**/**/mdx-components.tsx',
     ],
   },
 
