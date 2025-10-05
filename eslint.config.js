@@ -27,7 +27,12 @@ const config = [
   },
 
   // Apply legacy configs (Next.js and core rules)
-  ...compat.extends('next', 'next/core-web-vitals', 'prettier'),
+  ...compat.extends(
+    'next',
+    'next/core-web-vitals',
+    'next/typescript',
+    'prettier',
+  ),
 
   // **1. Global/Source Code Rules (Stricter)**
   {
