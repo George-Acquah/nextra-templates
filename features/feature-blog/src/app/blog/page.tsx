@@ -2,19 +2,23 @@ import Blogs from '@/components/blog/blog-grid';
 import { getBlogPosts, getAuthors } from '@/libs';
 import { getBlogSchema, paginate } from '@/utils';
 import { OWNER_NAME, SITE_URL } from '@nextra-templates/constants';
-import { getBreadcrumbSchema, getPageMetadata } from '@nextra-templates/utils';
+import {
+  getBreadcrumbSchema,
+  getPageMetadata,
+  slugify,
+} from '@nextra-templates/utils';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
 
 type Props = {
   searchParams: Promise<{
-    tag?: string
-    query?: string
-    currentPage?: string
-    pageSize?: string
-  }>
-}
+    tag?: string;
+    query?: string;
+    currentPage?: string;
+    pageSize?: string;
+  }>;
+};
 
 export const generateMetadata = (): Metadata =>
   getPageMetadata({
@@ -29,7 +33,7 @@ export const generateMetadata = (): Metadata =>
 export default async function BlogsPage({ searchParams }: Props) {
   const { tag, query, currentPage = '1', pageSize = '5' } = await searchParams;
   const authors = getAuthors();
-  const author = authors.find((a) => a.slug === 'author-slug');
+  const author = authors.find((a) => a.slug === slugify(OWNER_NAME));
   if (!author) {
     notFound();
   }

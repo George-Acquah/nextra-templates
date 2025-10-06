@@ -1,6 +1,6 @@
 [
   {
-    "slug": "author-slug",
+    "slug": "owner-name",
     "name": "Author Name",
     "description": "Full-Stack | MERN | .NET",
     "bio": "Full-stack developer — writing about React, Next.js and web performance.",
