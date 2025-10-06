@@ -1,1 +1,53 @@
 @import 'root.css';
+@import './mdx.css';
+
+@theme inline {
+  --color-hr: var(--hr);
+}
+
+:root {
+  --sh-keyword: var(--purple);
+  --sh-class: var(--blue);
+  --sh-sign: var(--red);
+  --sh-string: var(--green);
+  --sh-comment: var(--gray);
+  --sh-jsxliterals: var(--blue);
+  --sh-property: var(--burgundy-red);
+  --sh-entity: var(--orange);
+
+  --blue: #005cc5;
+  --red: #d73a49;
+  --green: #22863a;
+  --gray: #6a737d;
+  --burgundy-red: #b31d28;
+  --orange: #e36209;
+
+  --code-bg: var(--color-gray-200);
+  --pre-bg: var(--color-gray-100);
+  --purple: var(--color-purple-700);
+  --hr: var(--color-gray-200);
+}
+
+.dark {
+  --purple: #cbacf9;
+  --blue: #7aa2f7;
+  --red: #d73a49;
+  --green: #9ece6a; /* green */
+  --gray: #565f89; /* gray */
+  --burgundy-red: #73daca; /* burgundy red */
+  --orange: #e0af68; /* orange */
+
+  --code-bg: var(--color-gray-800);
+  --pre-bg: var(--color-gray-900);
+  --hr: var(--color-gray-600);
+}
+
+/* Utilities */
+@layer utilities {
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+}
