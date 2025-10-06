@@ -1,0 +1,66 @@
+/* mdx.css */
+pre {
+  background-color: var(--pre-bg);
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  line-height: 1;
+}
+
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+code {
+  font-size: 14px;
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
+  background-color: var(--code-bg);
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+pre code > span .sh__token--identifier {
+  color: var(--color-foreground) !important;
+}
+
+code:not(pre code) span {
+  font-weight: 500;
+  color: black !important;
+}
+
+pre code span {
+  font-weight: 500;
+}
+
+hr {
+  color: var(--color-hr);
+  margin: 1em 0 0 0;
+}
+
+/* Remove Safari input shadow on mobile */
+input[type='text'],
+input[type='email'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+table {
+  display: block;
+  max-width: fit-content;
+  overflow-x: auto;
+  white-space: nowrap;
+  text-align: left;
+}
