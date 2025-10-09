@@ -18,11 +18,13 @@ const config = [
       'node_modules/',
       '**/**/node_modules/',
       '**/**/.next/',
-      '**lates/**/dist/',
+      '**temlates/**/dist/',
       '.next/',
       '**/**/public/',
       '**/**/*.d.ts',
       '**/**/mdx-components.tsx',
+      '**/coverage/',
+      '**/__tests__/**',
     ],
   },
 
@@ -45,7 +47,15 @@ const config = [
 
   // **2. Overrides (Laxer)**
   {
-    files: ['scripts/*.ts', 'configs/*.js', 'postcss.config.mjs'],
+    files: [
+      'scripts/*.ts',
+      'configs/*.js',
+      'postcss.config.mjs',
+      '**/*.test.ts',
+      '**/*.test.tsx',
+      'vitest.config.ts',
+      'vitest.setup.ts',
+    ],
     rules: {
       'no-console': 'off', // Override 'no-console' to 'off' for these files
     },
